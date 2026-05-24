@@ -15,6 +15,10 @@
 
 	<!-- Importação do arquivo CSS. -->
 	<link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 
 	<!-- Título da aba do navegador -->
 	<title>EcoAgro-Monitor</title>
@@ -48,16 +52,77 @@
 	<aside>Aside</aside>
 
 	<!-- Agrupa o conteúdo principal da página ou aplicação. -->
-	<main class="principal">
-		
+	<main class="principal" id="001">
 	</main>
 
 	<!-- Agrupa informações de autoria, direitos autorais, contato, 
 		   mapa do site, links e documento relacionados. -->
-	<footer>Footer
+	  <!-- ============================================================
+    RODAPÉ — Footer profissional
+    GitHub e referência ao tema Agrinho 2026.
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
 
-		<a class="github" href="https://github.com/LucasPortel4" target="_blank">GitHub</a>
-	</footer>
+      <!-- Topo do rodapé: logo + descrição -->
+      <div class="footer-top">
+        <div class="footer-brand" data-aos="fade-right">
+          <div class="footer-logo">
+            <i class="fa-solid fa-leaf"></i>
+            <span>EcoAgro<strong>Monitor</strong></span>
+          </div>
+          <p>Tecnologia e natureza caminhando juntas pelo futuro do agronegócio sustentável.</p>
+          <!-- Redes sociais do projeto (ficticias) -->
+          <div class="social-links">
+            <a href="https://www.instagram.com/lucas_portel4a/" aria-label="Instagram do projeto" class="social-btn">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com/LucasPortel4" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegação rápida no rodapé -->
+        <div class="footer-nav" data-aos="fade-up" data-aos-delay="100">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#painel">Painel</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+          </ul>
+        </div>
+
+        <!-- Informações do projeto -->
+        <div class="footer-info" data-aos="fade-left" data-aos-delay="200">
+          <h4>Sobre o Projeto</h4>
+          <ul>
+            <li><i class="fa-solid fa-award"></i> Agrinho 2026</li>
+            <li><i class="fa-solid fa-tag"></i> Tecnologia & Sustentabilidade</li>
+            <li><i class="fa-solid fa-code"></i> HTML · CSS · JavaScript</li>
+            <li>
+              <i class="fa-brands fa-github"></i>
+              <a href="https://github.com" target="_blank" rel="noopener">Ver no GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Linha de copyright -->
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 EcoAgro Monitor — Feito com
+          <i class="fa-solid fa-heart" style="color: #52B788;"></i>
+          para o Agrinho 2026 · Todos os direitos reservados.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+	<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
 
 	<!-- Importação do arquivo JavaScript. -->
 	<script type="text/javascript" src="assets/js/script.js"></script>

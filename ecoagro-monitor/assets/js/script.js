@@ -46,3 +46,23 @@ closeMenu.addEventListener('click', () => {
 		openMenu.removeAttribute('style')
 	}, 200);
 })
+
+/* Botao flutuante para voltar ao topo. */
+const backToTop = document.getElementById('backToTop')
+
+if (backToTop) {
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 180) {
+			backToTop.classList.add('visible')
+		} else {
+			backToTop.classList.remove('visible')
+		}
+	})
+
+	backToTop.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		})
+	})
+}

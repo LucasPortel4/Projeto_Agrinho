@@ -1,4 +1,20 @@
 @charset "UTF-8";
+:root {
+  --verde-escuro:  #1B4332;
+  --verde-medio:   #2D6A4F;
+  --verde-claro:   #52B788;
+  --agua:          #74C69D;
+  --branco:        #F8F9FA;
+  --amarelo:       #F4D03F;
+  --azul:          #4FC3F7;
+  --cinza-escuro:  #0d1f16;
+  --card-bg:       rgba(29, 71, 52, 0.6);
+  --card-border:   rgba(82, 183, 136, 0.2);
+  --sombra:        0 8px 32px rgba(0, 0, 0, 0.4);
+  --radius:        16px;
+  --navbar-h:      70px;
+  --transition:    0.3s ease;
+}
 
 /* Propriedades que se aplicam a todos os elementos da página. */
 * {
@@ -28,7 +44,7 @@ body {
 	flex: 1 1 100vw;
 
 	/* Margem de todos os lados. */
-	margin: 1px;
+	margin: 0px;
 }
 
 /* Formatação comum entre os elementos. */
@@ -42,9 +58,8 @@ header, nav, main, aside, footer {
 	display: flex;
 
 	/* Margem externa de todos os lados. */
-	margin: 01px;
+	margin: 0px;
 }
-
 /* Seletores para formatação individual. */
 
 header {
@@ -140,13 +155,19 @@ main {
 	/* flex-shrink - Capacidade de redução do item.    */
 	/* flex-basis – Tamanho inicial do item.           */
 	flex: 20 1 500px;
-	padding: 300px;
+	padding: 350px;
+	
 		background-image: url("/ecoagro-monitor/assets/img/fazenda3.png");
 		background-size: cover;
   		background-repeat: no-repeat;
  		background-position: center;
- 		
 	
+}
+main h1 {
+	font-family: 'Arial', sans-serif;
+	font-size: 40pt;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 aside {
@@ -159,11 +180,9 @@ aside {
 }
 
 footer {
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
 	flex: 1 1 100vw;
+	background: #143210;
+
 }
 
 a {
@@ -256,9 +275,243 @@ a {
 		/* Ordem da visualização dos elementos. */
 		order: 3;
 	}
+}
 
-	footer {
-		/* Ordem da visualização dos elementos. */
-		order: 4;
-	}
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--card-border);
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #082118 0%, #04120d 100%);
+  border-top: 1px solid rgba(82, 183, 136, 0.2);
+  padding: 70px 0 28px;
+  margin: 0;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 380px at 10% -20%, rgba(82, 183, 136, 0.14), transparent 60%),
+    radial-gradient(900px 350px at 85% -25%, rgba(36, 122, 87, 0.16), transparent 62%);
+  pointer-events: none;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 52px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+  font-size: 2rem;
+  color: var(--branco);
+  margin-bottom: 14px;
+}
+
+.footer-logo i {
+  color: var(--verde-claro);
+  font-size: 1.5rem;
+}
+
+.footer-logo strong {
+  color: var(--verde-claro);
+}
+
+.footer-brand p {
+  color: var(--agua);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 390px;
+  margin-bottom: 26px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--agua);
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+
+.social-btn:hover {
+  border-color: var(--verde-claro);
+  color: var(--verde-claro);
+  background: rgba(82, 183, 136, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-nav h4,
+.footer-info h4 {
+  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 20px;
+}
+
+.footer-nav ul,
+.footer-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav a,
+.footer-info li {
+  color: var(--agua);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav a:hover {
+  color: var(--verde-claro);
+}
+
+.footer-info a {
+  color: var(--agua);
+  text-decoration: underline;
+}
+
+.footer-info a:hover {
+  color: var(--verde-claro);
+}
+
+.footer-info i {
+  color: var(--verde-claro);
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(82, 183, 136, 0.2);
+  padding-top: 24px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: rgba(116, 198, 157, 0.65);
+  font-size: 1rem;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(82, 183, 136, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: all var(--transition);
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #6fe0b3;
+  box-shadow: 0 10px 26px rgba(82, 183, 136, 0.6);
+}
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 56px 0 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 38px;
+  }
+
+  .footer-brand p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    font-size: 1.6rem;
+  }
+
+  .footer-nav a,
+  .footer-info li {
+    font-size: 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
+
+  .back-to-top {
+    width: 48px;
+    height: 48px;
+    right: 20px;
+    bottom: 20px;
+  }
 }
