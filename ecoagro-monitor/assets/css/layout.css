@@ -7,9 +7,7 @@
   --branco:        #F8F9FA;
   --amarelo:       #F4D03F;
   --azul:          #4FC3F7;
-  --cinza-escuro:  #0d1f16;
-  --card-bg:       rgba(29, 71, 52, 0.6);
-  --card-border:   rgba(82, 183, 136, 0.2);
+  --cinza-escuro:  #606060;
   --sombra:        0 8px 32px rgba(0, 0, 0, 0.4);
   --radius:        16px;
   --navbar-h:      70px;
@@ -27,8 +25,62 @@
 	/* Inclui o preenchimento e a borda na largura e altura. */
 	box-sizing: border-box;
 }
+.quiz1, .quiz2, .quiz3 {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  flex-direction: row;
+  display: flex;
+  gap: 20px;
+}
 
-body {
+
+
+.inicioQ, .localQuiz, .I1, .tituloQ, .paragrafoQ, .titulo, .paragrafo {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.inicioQ {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 100px 20vw;
+}
+.localQuiz {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px 20vw;
+}
+.tituloQ {
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    align-items: flex-start;
+}
+.paragrafoQ {
+    color: var(--verde-escuro);
+    font-size: 1.15rem;
+    align-items: flex-start;
+}
+
+.I1 {
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 300px;
+  background-image: url('/ecoagro-monitor/assets/img/fundo.png');
+  background-size: cover;
+  background-position: center;
+}
+.titulo {
+    color: var(--branco);
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+.paragrafo {
+    color: var(--branco);
+    font-size: 1.15rem;
+}
+
+
+.body {
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
@@ -147,36 +199,6 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-}
-
-main {
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 20 1 500px;
-	padding: 350px;
-	
-		background-image: url("/ecoagro-monitor/assets/img/fazenda3.png");
-		background-size: cover;
-  		background-repeat: no-repeat;
- 		background-position: center;
-	
-}
-main h1 {
-	font-family: 'Arial', sans-serif;
-	font-size: 40pt;
-	color: #fff;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-aside {
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100px;
-	
 }
 
 footer {

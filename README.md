@@ -1,6 +1,5 @@
 # Projeto Agrinho
-
-Este repositório contém os arquivos finais do projeto Agrinho na pasta `.dist`.
+    Projeto realizado pelo aluno Lucas Rodrigues Portela do 3º B do Colégio Estadual Professora Cleia Godoy Fabrini Silva, para o concurso agrinho 2026 promovido pelo Sistema FAEP/SENAR-PR em parceria com o Governo do Estado do Paraná
 
 ## Descrição
 
@@ -16,7 +15,7 @@ O projeto Agrinho é uma iniciativa voltada para educação e tecnologia no meio
 
 1. Abra a pasta `EcoAgro-Monitor`.
 2. Verifique os arquivos presentes.
-3. use um live preview no arquivo layout.html ou acesse via vercel no seu navegador usando o link:.
+3. use um live preview no arquivo layout.html ou acesse via vercel no seu navegador usando o link(link ainda nao criado).
 
 ## Observação
 
