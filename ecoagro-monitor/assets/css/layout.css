@@ -86,7 +86,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding: 300px;
-  background-image: url('/ecoagro-monitor/assets/img/fundo.png');
+  background-image: url('../img/fundo.png');
   background-size: cover;
   background-position: center;
 }

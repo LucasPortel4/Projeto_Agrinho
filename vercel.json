@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/ecoagro-monitor/index.html" },
+    { "source": "/assets/:path*", "destination": "/ecoagro-monitor/assets/:path*" },
+    { "source": "/Quizz/:path*", "destination": "/ecoagro-monitor/Quizz/:path*" }
+  ]
+}
