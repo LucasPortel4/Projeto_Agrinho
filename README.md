@@ -1,5 +1,8 @@
 # Projeto Agrinho
-    Projeto realizado pelo aluno Lucas Rodrigues Portela do 3º B do Colégio Estadual Professora Cleia Godoy Fabrini Silva, para o concurso agrinho 2026 promovido pelo Sistema FAEP/SENAR-PR em parceria com o Governo do Estado do Paraná
+    Projeto realizado pelo aluno Lucas Rodrigues Portela do 3º B do
+    Colégio Estadual Professora Cleia Godoy Fabrini Silva, para o 
+    concurso agrinho 2026 promovido pelo Sistema FAEP/SENAR-PR em 
+    parceria com o Governo do Estado do Paraná
 
 ## Descrição
 

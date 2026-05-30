@@ -26,10 +26,31 @@
 	box-sizing: border-box;
 }
 .quiz1, .quiz2, .quiz3 {
-  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
-  flex-direction: row;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.imgQ1, .imgQ2, .imgQ3 {
+  max-width: 100%;
+  border-radius: 15%;
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+}
+.btnQuiz {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--verde-claro);
+  color: var(--branco);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
 }
 
 
@@ -41,8 +62,8 @@
 }
 .inicioQ {
   flex-wrap: wrap;
-  flex-direction: column;
   padding: 100px 20vw;
+  flex-direction: row;
 }
 .localQuiz {
   flex-wrap: wrap;
