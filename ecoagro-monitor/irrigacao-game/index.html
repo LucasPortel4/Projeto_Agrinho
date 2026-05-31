@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Irrigação Automática</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <a href="../index.html" class="btn-voltar">← Início</a>
+        <h1>Sistema de Irrigação Automática</h1>
+    </header>
+
+    <div class="conteudo">
+        <section class="area-jogo">
+            <div id="grade" class="grade" aria-label="Grade do jogo"></div>
+            <p class="dica">Conecte os canos da fonte (💧) até cada planta (🌱). Clique no cano para selecionar e girar.</p>
+        </section>
+
+        <aside class="painel">
+            <div class="caixa-info">
+                <span>Água disponível</span>
+                <strong id="agua">2000 L</strong>
+            </div>
+            <div class="caixa-info">
+                <span>Objetivo</span>
+                <p>Irrigue todas as plantações!</p>
+            </div>
+            <div class="caixa-info">
+                <span>Nível</span>
+                <strong id="nivel" class="numero-nivel">1 / 5</strong>
+            </div>
+            <div class="caixa-info plantas-info">
+                <span id="plantas-ok">0</span> / <span id="plantas-total">0</span> plantas irrigadas
+            </div>
+        </aside>
+    </div>
+
+    <footer class="botoes">
+        <button type="button" id="btn-girar" class="acao">
+            <span class="icone">↻</span>
+            GIRAR
+        </button>
+        <button type="button" id="btn-valvula" class="acao">
+            <span class="icone valvula">◎</span>
+            VÁLVULA
+        </button>
+        <button type="button" id="btn-bomba" class="acao principal">
+            <span class="icone bomba">⚡</span>
+            BOMBA
+        </button>
+    </footer>
+
+    <div id="aviso" class="aviso oculto" role="alert"></div>
+
+    <script src="js/jogo.js"></script>
+</body>
+</html>

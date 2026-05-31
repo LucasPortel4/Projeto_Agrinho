@@ -3,6 +3,8 @@
     { "source": "/", "destination": "/ecoagro-monitor/index.html" },
     { "source": "/Quizz", "destination": "/ecoagro-monitor/Quizz/index.html" },
     { "source": "/assets/:path*", "destination": "/ecoagro-monitor/assets/:path*" },
-    { "source": "/Quizz/:path*", "destination": "/ecoagro-monitor/Quizz/:path*" }
+    { "source": "/Quizz/:path*", "destination": "/ecoagro-monitor/Quizz/:path*" },
+    { "source": "/irrigacao-game", "destination": "/ecoagro-monitor/irrigacao-game/index.html" },
+    { "source": "/irrigacao-game/:path*", "destination": "/ecoagro-monitor/irrigacao-game/:path*" }
   ]
 }
