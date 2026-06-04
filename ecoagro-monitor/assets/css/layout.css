@@ -1,13 +1,19 @@
 @charset "UTF-8";
 :root {
-  --verde-escuro:  #1B4332;
+  --verde-escuro:  #1A2E1B;
   --verde-medio:   #2D6A4F;
   --verde-claro:   #52B788;
-  --agua:          #74C69D;
-  --branco:        #F8F9FA;
-  --amarelo:       #F4D03F;
-  --azul:          #4FC3F7;
+  --agua:          #B7E4C7;
+  --terra:         #8B5E3C;
+  --ceu:           #1D6FA4;
+  --branco:        #F5F7F2;
+  --sol:           #F4D06F;
+  --acao:          #E76F51;
+  --azul:          #74B3CE;
   --cinza-escuro:  #606060;
+  --texto-suave:   #A8B5A0;
+  --texto-escuro:  #3D4F3E;
+  --superficie:    #E8EDE5;
   --sombra:        0 8px 32px rgba(0, 0, 0, 0.4);
   --radius:        16px;
   --navbar-h:      70px;
@@ -18,7 +24,7 @@
 * {
 	/* Remove a margem externa de todos os lados do elemento. */
 	margin: 0;
-
+  scroll-behavior: smooth;
 	/* Remove o espaçamento interno de todos os lados do elemento. */
 	padding: 0;
 
@@ -26,7 +32,7 @@
 	box-sizing: border-box;
 }
 .exemplos {
-  background-color: var(--verde-escuro);
+  background-color: rgb(5, 24, 18);
   color: var(--agua);
   display: flex;
   flex-direction: column;
@@ -84,7 +90,6 @@
  
 }
 
-
 .quiz1, .quiz2, .quiz3 {
   display: flex;
   flex-wrap: wrap;
@@ -92,6 +97,13 @@
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  border-color: var(--verde-claro);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
+  box-shadow: var(--sombra);
+  padding: 10px;
+  margin: 20px;
 }
 
 .imgQ1, .imgQ2, .imgQ3 {
@@ -104,7 +116,7 @@
 .btnQuiz {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: var(--verde-claro);
+  background-color: var(--verde-escuro);
   color: var(--branco);
   border: none;
   border-radius: 5px;
@@ -124,8 +136,11 @@
   flex-wrap: wrap;
   padding: 100px 20vw;
   flex-direction: row;
+  background-color: var(--fundo);
 }
 .localQuiz {
+  color: var(--verde-claro);
+  background-color: var(--fundo);
   flex-wrap: wrap;
   flex-direction: column;
   padding: 30px 20vw;
@@ -141,13 +156,30 @@
     font-size: 1.15rem;
     align-items: flex-start;
 }
-.sobre {
+.imgS {
+  width: 40%;
+  max-height: 500px;
+  border-radius: 5%;
+  
+}
+.textoS {
+  padding: 20px;
+  font-family: 'DM Sans', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 150%;
+  color: var(--agua);
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 30px 20vw;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+}
+.sobre {
   background-color: rgb(5, 24, 18);
-  color: var(--branco);
+  color: var(--agua);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
 
 }
 .tituloI {
@@ -157,16 +189,17 @@
   font-size: 2.5rem;
   color: var(--agua);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 .paragrafoI {
-  font-family: fantasy;
-  font-size: large;
-  color:azure;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  font-size: 1.15rem;
+  color: var(--branco);
 
 }
 .I1 {
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   padding: 300px;
   background-image: url('../img/fundo.png');
   background-size: cover;
@@ -191,7 +224,7 @@
 
 	/* Quebra de linha quando os itens não couberem na largura da tela. */
 	flex-wrap: wrap;
-
+  
 	/* Junção de flex-grow, flex-shrink e flex-basis.  */
 	/* flex-grow – Habilidade de um flex item crescer. */
 	/* flex-shrink - Capacidade de redução do item.    */
@@ -216,21 +249,12 @@ header, nav, main, aside, footer {
 	margin: 0px;
 }
 /* Seletores para formatação individual. */
-
-header {
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100vw;
-}
-
 header #logo {
 	/* Exibição flexível.                          */
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
 	display: flex;
-	font-family: Impact,'fantasy';
+	font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
 	font-size: 20pt;
 	/* Junção de flex-grow, flex-shrink e flex-basis.  */
 	/* flex-grow – Habilidade de um flex item crescer. */
@@ -239,7 +263,7 @@ header #logo {
 	flex: 0 1 200px;
 
 	/* Cor do fundo. */
-	background: #2d5a27;
+	background: var(--verde-escuro);
 
 	/* Alinha os itens na vertical. */
 	justify-content: center;
@@ -279,7 +303,7 @@ nav {
 	/* Alinha os itens na horizontal. */
 	align-items: center;
 	color: #fff;
-	background: #2d5a27;
+	background: var(--verde-escuro)  ;
 
 	/* Junção de flex-grow, flex-shrink e flex-basis.  */
 	/* flex-grow – Habilidade de um flex item crescer. */
@@ -291,7 +315,7 @@ nav {
 nav a {
 	/* Margem de todos os lados. */
 	margin: 0 3%;
-
+  color: var(--verde-claro);
 	/* Tamanho da fonte. */
 	font-size: 15pt;
 	font-family: 'Arial', sans-serif;

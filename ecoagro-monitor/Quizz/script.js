@@ -1,38 +1,38 @@
 ﻿const questions = [
     {
-        question: "Qual é a capital do Brasil?",
+        question: "Qual tecnologia ajuda a medir a umidade do solo no agronegócio?",
         answers: [
-            { id: 1, text: "Rio de Janeiro", correct: false },
-            { id: 2, text: "São Paulo", correct: false },
-            { id: 3, text: "Brasília", correct: true },
-            { id: 4, text: "Salvador", correct: false },
+            { id: 1, text: "Sensor de umidade", correct: true },
+            { id: 2, text: "Máquina de lavar", correct: false },
+            { id: 3, text: "Impressora 3D", correct: false },
+            { id: 4, text: "Ventilador de teto", correct: false },
         ],
     },
     {
-        question: "Qual é a maior floresta tropical do mundo?",
+        question: "Qual prática representa um uso inteligente da tecnologia no campo?",
         answers: [
-            { id: 1, text: "Floresta Amazônica", correct: true },
-            { id: 2, text: "Floresta Congo", correct: false },
-            { id: 3, text: "Floresta Andina", correct: false },
-            { id: 4, text: "Floresta do Pantanal", correct: false },
+            { id: 1, text: "Irrigação automatizada", correct: true },
+            { id: 2, text: "Queima de resíduos", correct: false },
+            { id: 3, text: "Plantio sem planejamento", correct: false },
+            { id: 4, text: "Uso excessivo de agrotóxicos", correct: false },
         ],
     },
     {
-        question: "Qual é o maior país do mundo em extensão territorial?",
+        question: "Qual benefício a inteligência artificial pode trazer para o agronegócio?",
         answers: [
-            { id: 1, text: "Rússia", correct: true },
-            { id: 2, text: "Canadá", correct: false },
-            { id: 3, text: "Estados Unidos", correct: false },
-            { id: 4, text: "China", correct: false },
+            { id: 1, text: "Prever safras e reduzir desperdícios", correct: true },
+            { id: 2, text: "Aumentar o consumo de água sem controle", correct: false },
+            { id: 3, text: "Substituir totalmente os agricultores", correct: false },
+            { id: 4, text: "Parar a produção rural", correct: false },
         ],
     },
     {
-        question: "Qual é o maior oceano do mundo?",
+        question: "Qual ferramenta digital ajuda a organizar vendas e produção na agricultura?",
         answers: [
-            { id: 1, text: "Oceano Atlântico", correct: false },
-            { id: 2, text: "Oceano Índico", correct: false },
-            { id: 3, text: "Oceano Ártico", correct: false },
-            { id: 4, text: "Oceano Pacífico", correct: true },
+            { id: 1, text: "Software de gestão agrícola", correct: true },
+            { id: 2, text: "Radio antigo", correct: false },
+            { id: 3, text: "Calculadora simples", correct: false },
+            { id: 4, text: "Mapa desenhado à mão", correct: false },
         ],
     },
 ];
