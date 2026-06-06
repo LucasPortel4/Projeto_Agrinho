@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>clickgame</title>
     <link rel="stylesheet" href="/ecoagro-monitor/clickgame/style.css">
 </head>
 <body>
     <section>
-        <div class="main">
+      <div class="main">
         <div class="left">
             <h3>Ovos:<span class="ovovalor">0</span></h3>
-            <img class="img" src="/ecoagro-monitor/clickgame/img/ovonv1.png" alt="Ovo" onclick="incrementovo()">
+            <img class="egg-img" src="/ecoagro-monitor/clickgame/img/ovonv1.png" alt="Ovo" onclick="incrementovo()" draggable="false">
 
         </div>
         <div class="right">
-            right
-
-
+            <div class="upgrade" onclick="buyclique()">
+                <div class="left-section">
+                    <img src="/ecoagro-monitor/clickgame/img/click-img.png" alt="👆" class="upgrade-img">
+                </div>
+                <div class="mid-section">
+                    <h4>Clicker</h4>
+                    <div class="cost-info">
+                        <p>Preço: <span class="clicker-cost">10</span></p>
+                        <img src="/ecoagro-monitor/clickgame/img/ovo.png" alt="Ovo" class="egg-image">
+                    </div>
+                </div>
+                <div class="right-section">
+                    level 0
+                </div>
+            </div>
         </div>
 
-        </div>
+      </div>
     </section>
 
     <script src="/ecoagro-monitor/clickgame/script/index.js"></script>
