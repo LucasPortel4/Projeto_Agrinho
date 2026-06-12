@@ -18,7 +18,7 @@ O projeto Agrinho é uma iniciativa voltada para educação e tecnologia no meio
 
 1. Abra a pasta `EcoAgro-Monitor`.
 2. Verifique os arquivos presentes.
-3. use um live preview no arquivo layout.html ou acesse via vercel no seu navegador usando o Link: [Agroteen](https://agroteen.vercel.app).
+3. use um live preview no arquivo layout.html ou acesse via vercel no seu navegador usando o Link: [EcoAgro](https://projeto-agrinho-gilt.vercel.app/).
 
 ### skils:
 -  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
