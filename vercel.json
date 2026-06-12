@@ -5,6 +5,8 @@
     { "source": "/assets/:path*", "destination": "/ecoagro-monitor/assets/:path*" },
     { "source": "/Quizz/:path*", "destination": "/ecoagro-monitor/Quizz/:path*" },
     { "source": "/irrigacao-game", "destination": "/ecoagro-monitor/irrigacao-game/index.html" },
-    { "source": "/irrigacao-game/:path*", "destination": "/ecoagro-monitor/irrigacao-game/:path*" }
+    { "source": "/irrigacao-game/:path*", "destination": "/ecoagro-monitor/irrigacao-game/:path*" },
+    { "source": "/clickgame", "destination": "/ecoagro-monitor/clickgame/index.html" },
+    { "source": "/clickgame/:path*", "destination": "/ecoagro-monitor/clickgame/:path*" }
   ]
 }

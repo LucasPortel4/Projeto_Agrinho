@@ -1,69 +1,60 @@
-/* Ação de eventos sobre o botão menu da tag nav (mobile). */
-/* Parâmetros: Nome do evento, função. */
-openMenu.addEventListener('click', () => {
+const menu = document.getElementById("menu");
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const backToTop = document.getElementById("backToTop");
+const revealElements = document.querySelectorAll(".reveal");
 
-	/* Sobrepõe a propriedade display: none aplicada no
-	   CSS por display: flex que o torna visível. */ 
-	menu.style.display = "flex"
+function toggleMenu(isOpen) {
+  if (!menu || !openMenu) return;
 
-	/* Captura o tamanho do menu nav e aplica na posição. */
-	menu.style.right = (menu.offsetWidth * -1) + 'px'
-
-	/* Após 10 milésimos de segundo, adiciona o atributo style, */
-	/* e adiciona as propriedades CSS.*/
-	setTimeout(()=> {
-		/* Faz o menu nav aparecer na velocidade em que foi
-		   determinado na propriedade transition no CSS.*/
-		menu.style.opacity = '1'
-
-		/* Move o menu nav para a posição 0 a direita. Utiliza 
-		   também a velocidade definida, na propriedade transition 
-		   no CSS para realizar o movimento mais suave.*/
-		menu.style.right = "0"
-
-		/* Oculta o botão que torna visível o elemento nav.*/
-		openMenu.style.display = 'none'
-	}, 10);
-})
-
-/* Ação de eventos sobre o botão X da tag nav (mobile). */
-/* Parâmetros: Nome do evento, função. */
-closeMenu.addEventListener('click', () => {
-
-	/* Faz o menu nav desaparecer na velocidade em que foi
-	   determinado na propriedade transition no CSS. */
-	menu.style.opacity = '0'
-
-	/* Captura o tamanho do menu nav e aplica na posição. */
-	menu.style.right = (menu.offsetWidth * -1) + 'px'
-
-	/* Torna visível o botão que apresenta o menu nav. */
-	/* openMenu.style.display = 'block'*/
-	
-	/* Após 200 milésimos de 1 segundo, remove o atributo style. */
-	setTimeout(()=> {
-		menu.removeAttribute('style')
-		openMenu.removeAttribute('style')
-	}, 200);
-})
-
-/* Botao flutuante para voltar ao topo. */
-const backToTop = document.getElementById('backToTop')
-
-if (backToTop) {
-	window.addEventListener('scroll', () => {
-		if (window.scrollY > 180) {
-			backToTop.classList.add('visible')
-		} else {
-			backToTop.classList.remove('visible')
-		}
-	})
-
-	backToTop.addEventListener('click', () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
-		})
-	})
+  menu.classList.toggle("menu-open", isOpen);
+  openMenu.setAttribute("aria-expanded", String(isOpen));
+  document.body.style.overflow = isOpen ? "hidden" : "";
 }
 
+if (openMenu && closeMenu && menu) {
+  openMenu.setAttribute("aria-controls", "menu");
+  openMenu.setAttribute("aria-expanded", "false");
+  openMenu.setAttribute("aria-label", "Abrir menu");
+  closeMenu.setAttribute("aria-label", "Fechar menu");
+
+  openMenu.addEventListener("click", () => toggleMenu(true));
+  closeMenu.addEventListener("click", () => toggleMenu(false));
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => toggleMenu(false));
+  });
+}
+
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("visible", window.scrollY > 180);
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.14,
+    }
+  );
+
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("show"));
+}

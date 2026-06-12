@@ -5,6 +5,8 @@ const IMG = {
     cross: 'cano-4lados.png',
 };
 
+const CAMINHO_IMAGENS = '/irrigacao-game/img/';
+
 const CONEXOES = {
     straight: ['E', 'W'],
     l: ['N', 'E'],
@@ -119,7 +121,7 @@ let selecionado = null;
 let valvulaAberta = true;
 
 function urlImagemCano(arquivo) {
-    return new URL(`img/${arquivo}`, window.location.href).href;
+    return `${CAMINHO_IMAGENS}${arquivo}`;
 }
 
 function girarDirecao(dir, passos) {
